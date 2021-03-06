@@ -594,6 +594,9 @@ msgstr "A graphic version of the journal's title and logo (as a .gif, .jpg, or .
 msgid "manager.setup.contextInitials"
 msgstr "Journal initials"
 
+msgid "manager.setup.selectCountry"
+msgstr "Select the country where this journal is located, or the country of the mailing address for the journal or publisher."
+
 msgid "manager.setup.journalLayout"
 msgstr "Journal Layout"
 

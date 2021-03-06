@@ -10,6 +10,12 @@
 				"nullable"
 			]
 		},
+		"country": {
+			"type": "string",
+			"validation": [
+				"country"
+			]
+		},
 		"clockssLicense": {
 			"type": "string",
 			"multilingual": true,

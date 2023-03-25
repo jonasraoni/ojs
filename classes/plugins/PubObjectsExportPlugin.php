@@ -34,15 +34,14 @@ use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\notification\NotificationManager;
 use APP\template\TemplateManager;
+use Exception;
 use PKP\context\Context;
 use PKP\core\JSONMessage;
 use PKP\core\PKPRequest;
 use PKP\db\DAORegistry;
 use PKP\db\SchemaDAO;
 use PKP\file\FileManager;
-use PKP\filter\Filter;
 use PKP\linkAction\LinkAction;
-
 use PKP\linkAction\request\NullAction;
 use PKP\notification\PKPNotification;
 use PKP\plugins\Hook;
@@ -522,7 +521,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
         // and the field will "stealthily" survive even
         // when the DAO does not know about it.
         $dao = $object->getDAO();
-        $dao->updateObject($object);
+        $dao->update($object);
     }
 
     /**
@@ -915,6 +914,36 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
         }
 
         return false;
+    }
+
+    /**
+     * Get pub ID type
+     *
+     * @return string
+     */
+    public function getPubIdType()
+    {
+        throw new Exception('Not implemented');
+    }
+
+    /**
+     * Get pub ID display type
+     *
+     * @return string
+     */
+    public function getPubIdDisplayType()
+    {
+        throw new Exception('Not implemented');
+    }
+
+    /**
+     * Get pub ID display type
+     *
+     * @return string
+     */
+    public function getSettingsFormClassName()
+    {
+        throw new Exception('Not implemented');
     }
 }
 

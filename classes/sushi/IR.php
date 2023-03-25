@@ -41,6 +41,10 @@ class IR extends CounterR5Report
     /** If the details about the parent should be included */
     protected string $includeParentDetails = 'False';
 
+    public $itemIds;
+
+    public $parentDataType;
+
     /**
      * Get report name defined by COUNTER.
      */

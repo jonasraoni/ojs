@@ -218,6 +218,7 @@ class IssueGalleyForm extends Form
 
             if ($this->getData('label') == null) {
                 // Generate initial label based on file type
+                $fileType = $issueGalleyFile->getContentType();
                 if (isset($fileType)) {
                     if (strstr($fileType, 'pdf')) {
                         $issueGalley->setLabel('PDF');

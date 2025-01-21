@@ -227,7 +227,7 @@ class ManualPaymentPlugin extends PaymethodPlugin
     public function updateSchema($hookName, $args)
     {
         $installer = $args[0];
-        $result = & $args[1];
+        $result = &$args[1];
         $migration = new ManualPaymentEmailDataMigration($installer, $this);
         try {
             $migration->up();

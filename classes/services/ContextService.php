@@ -180,7 +180,7 @@ class ContextService extends \PKP\services\PKPContextService
      */
     public function validateContext($hookName, $args)
     {
-        $errors = & $args[0];
+        $errors = &$args[0];
         $props = $args[2];
         $allowedLocales = $args[3];
 

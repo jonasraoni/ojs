@@ -167,7 +167,7 @@ class ArticleSearchTest extends PKPTestCase
             foreach ([
                 $journal, $testCase, $testFromDate, $testToDate, $orderBy = 'score', $orderDir = 'desc',
                 $exclude = [], $page = 1, $itemsPerPage = 20, $totalResults = 3, $error = '',
-                //the last item, the result,  will be checked later on
+                //the last item, the result, will be checked later on
             ] as $position => $expected) {
                 self::assertEquals($expected, $this->_retrieveResultsParams[$position]);
             }
@@ -208,11 +208,11 @@ class ArticleSearchTest extends PKPTestCase
         $this->_retrieveResultsParams = $params;
 
         // Test returning count by-ref.
-        $totalCount = & $params[9];
+        $totalCount = &$params[9];
         $totalCount = 3;
 
         // Mock a result set and return it.
-        $results = & $params[11];
+        $results = &$params[11];
         $results = [3 => self::SUBMISSION_SEARCH_TEST_DEFAULT_ARTICLE];
         return true;
     }

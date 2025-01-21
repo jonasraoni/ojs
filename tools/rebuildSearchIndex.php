@@ -79,7 +79,7 @@ class rebuildSearchIndex extends CommandLineTool
      */
     public function callbackBaseUrl(string $hookName, array $params): bool
     {
-        $baseUrl = & $params[0];
+        $baseUrl = &$params[0];
         $baseUrl = Config::getVar('general', 'base_url');
         return Hook::ABORT;
     }

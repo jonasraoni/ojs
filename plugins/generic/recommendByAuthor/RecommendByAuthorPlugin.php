@@ -75,8 +75,8 @@ class RecommendByAuthorPlugin extends GenericPlugin
      */
     public function callbackTemplateArticlePageFooter($hookName, $params)
     {
-        $smarty = & $params[1];
-        $output = & $params[2];
+        $smarty = &$params[1];
+        $output = &$params[2];
 
         // Find articles of the same author(s).
         $displayedArticle = $smarty->getTemplateVars('article');

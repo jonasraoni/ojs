@@ -12,7 +12,7 @@ class resolveAgencyDuplicates extends \PKP\cliTool\CommandLineTool
     private ?string $agency_name = null;
     private bool $forceFlag = false;
     /**
-     * List of potential agencies to choose from along with related fields for resolution.
+     * @var array<string, array{status: string, additionalFields: string[]}> List of potential agencies to choose from along with related fields for resolution.
      *
      * Array shape should look like:
      * `['agency_name' => [
@@ -20,6 +20,7 @@ class resolveAgencyDuplicates extends \PKP\cliTool\CommandLineTool
      *      'additionalFields': [...],
      *      ]
      * ]`
+     *
      */
     private array $agencies = [
         'crossref' => [

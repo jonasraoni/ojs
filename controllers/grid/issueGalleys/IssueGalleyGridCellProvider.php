@@ -19,7 +19,6 @@ namespace APP\controllers\grid\issueGalleys;
 use APP\issue\IssueGalley;
 use PKP\controllers\grid\GridCellProvider;
 use PKP\controllers\grid\GridColumn;
-
 use PKP\facades\Locale;
 
 class IssueGalleyGridCellProvider extends GridCellProvider

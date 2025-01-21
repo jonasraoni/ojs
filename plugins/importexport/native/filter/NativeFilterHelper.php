@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file plugins/importexport/native/filter/NativeFilterHelper.php
  *

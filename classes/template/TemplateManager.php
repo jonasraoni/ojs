@@ -141,7 +141,7 @@ class TemplateManager extends PKPTemplateManager
                 'icon' => 'Issues'
             ];
             $index = false;
-            if(Config::getVar('features', 'enable_new_submission_listing')) {
+            if (Config::getVar('features', 'enable_new_submission_listing')) {
                 $index = array_search('dashboards', array_keys($menu));
             } else {
                 $index = array_search('submissions', array_keys($menu));

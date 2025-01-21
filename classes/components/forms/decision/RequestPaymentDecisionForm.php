@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file classes/components/form/decision/RequestPaymentDecisionForm.php
  *

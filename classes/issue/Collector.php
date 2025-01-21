@@ -417,7 +417,7 @@ class Collector implements CollectorInterface
             );
 
             // Add support to search using DOI identifiers
-            // search phrases starting with number followed by a '.'  will be interpreted as a DOI identifier. E.g: 10.1
+            // search phrases starting with number followed by a '.' will be interpreted as a DOI identifier. E.g: 10.1
             $isSearchPhraseDoi = Doi::beginsWithDoiPrefixPattern($searchPhrase);
             $words = array_filter(array_unique(explode(' ', $searchPhrase)), 'strlen');
             if (count($words) && !$isSearchPhraseDoi) {

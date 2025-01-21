@@ -323,13 +323,13 @@ class IssueHandler extends Handler
      * frontend/objects/issue_toc.tpl to function properly (i.e. current issue
      * and view issue).
      *
-     * @param \APP\core\Request         $request                    The core request object
-     * @param \APP\issue\Issue          $issue                      The issue to display
-     * @param \APP\journal\Journal|null $journal                    The journal associated with the request
-     * @param bool                      $showToc                    If false and a custom cover page exists,
-     * 	                                                            the cover page will be displayed. Otherwise table of contents
-     * 	                                                            will be displayed.
-     * @param bool                      $withSubscriptionDetails    Should include the subscription related information into the template
+     * @param \APP\core\Request $request The core request object
+     * @param \APP\issue\Issue $issue The issue to display
+     * @param \APP\journal\Journal|null $journal The journal associated with the request
+     * @param bool $showToc If false and a custom cover page exists,
+     *  the cover page will be displayed. Otherwise table of contents
+     *  will be displayed.
+     * @param bool $withSubscriptionDetails Should include the subscription related information into the template
      */
     public static function _setupIssueTemplate(Request $request, Issue $issue, ?Journal $journal = null, $showToc = false, $withSubscriptionDetails = true)
     {

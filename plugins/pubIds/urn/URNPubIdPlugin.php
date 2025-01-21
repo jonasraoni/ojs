@@ -291,9 +291,9 @@ class URNPubIdPlugin extends PubIdPlugin
      */
     public function validatePublicationUrn(string $hookName, array $args): void
     {
-        $errors = & $args[0];
+        $errors = &$args[0];
         $object = $args[1];
-        $props = & $args[2];
+        $props = &$args[2];
 
         if (empty($props['pub-id::other::urn'])) {
             return;

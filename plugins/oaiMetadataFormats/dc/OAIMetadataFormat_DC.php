@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @defgroup oai_format OAI Formats
  */
@@ -30,7 +31,7 @@ class OAIMetadataFormat_DC extends \PKP\plugins\oaiMetadataFormats\dc\PKPOAIMeta
      */
     public function toXml($record, $format = null)
     {
-        $article = & $record->getData('article');
+        $article = &$record->getData('article');
         return parent::toXml($article, $format);
     }
 }

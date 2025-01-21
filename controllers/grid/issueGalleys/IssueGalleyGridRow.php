@@ -20,7 +20,6 @@ use APP\issue\IssueGalley;
 use PKP\controllers\grid\GridRow;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
-
 use PKP\linkAction\request\RemoteActionConfirmationModal;
 
 class IssueGalleyGridRow extends GridRow

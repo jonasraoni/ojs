@@ -46,7 +46,7 @@ class NavigationMenuService extends \PKP\services\PKPNavigationMenuService
      */
     public function getMenuItemTypesCallback($hookName, $args)
     {
-        $types = & $args[0];
+        $types = &$args[0];
 
         $ojsTypes = [
             self::NMI_TYPE_CURRENT => [
@@ -80,7 +80,7 @@ class NavigationMenuService extends \PKP\services\PKPNavigationMenuService
      */
     public function getDisplayStatusCallback($hookName, $args)
     {
-        $navigationMenuItem = & $args[0];
+        $navigationMenuItem = &$args[0];
 
         $request = Application::get()->getRequest();
         $dispatcher = $request->getDispatcher();

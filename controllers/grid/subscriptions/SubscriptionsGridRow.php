@@ -38,7 +38,7 @@ class SubscriptionsGridRow extends GridRow
         parent::initialize($request, $template);
 
         // Is this a new row or an existing row?
-        $element = & $this->getData();
+        $element = &$this->getData();
         assert($element instanceof IndividualSubscription || $element instanceof InstitutionalSubscription);
 
         $rowId = $this->getId();

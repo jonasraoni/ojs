@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file classes/components/form/FieldArchivingPn.php
  *
@@ -24,7 +25,7 @@ class FieldArchivingPn extends FieldOptions
     /** @copydoc Field::$component */
     public $component = 'field-archiving-pn';
 
-    /** @var string The message to show in a modal when the link is clicked.  */
+    /** @var string The message to show in a modal when the link is clicked. */
     public $terms = '';
 
     /** @var string The message to show when the plugin is disabled. */

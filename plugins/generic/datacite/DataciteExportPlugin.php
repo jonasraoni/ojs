@@ -393,7 +393,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
      */
     public function _getObjectUrl($request, $context, $object)
     {
-        //Dispatcher needed when  called from CLI
+        //Dispatcher needed when called from CLI
         $dispatcher = $request->getDispatcher();
         // Retrieve the article of article files.
         if ($object instanceof Galley) {

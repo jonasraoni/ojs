@@ -205,7 +205,7 @@ class SubscriptionForm extends Form
     {
         $request = Application::get()->getRequest();
         $journal = $request->getJournal();
-        $subscription = & $this->subscription;
+        $subscription = &$this->subscription;
 
         parent::execute(...$functionArgs);
 

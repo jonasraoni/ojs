@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @defgroup controllers_grid_issues Issues Grid
  * The Issues Grid implements the management interface allowing editors to
@@ -238,9 +239,7 @@ class IssueGridHandler extends GridHandler
     /**
      * Delete an uploaded cover image.
      *
-     * @param array $args
-     *   `coverImage` string Filename of the cover image to be deleted.
-     *   `issueId` int Id of the issue this cover image is attached to
+     * @param array{coverImage: string, issueId: int} $args [Filename of the cover image to be deleted, Id of the issue this cover image is attached to]
      * @param Request $request
      *
      * @return JSONMessage JSON object

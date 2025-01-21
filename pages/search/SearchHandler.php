@@ -61,7 +61,7 @@ class SearchHandler extends Handler
     public function _assignSearchFilters($request, &$templateMgr, $searchFilters)
     {
         // Get the journal id (if any).
-        $journal = & $searchFilters['searchJournal'];
+        $journal = &$searchFilters['searchJournal'];
         $journalId = ($journal ? $journal->getId() : null);
         $searchFilters['searchJournal'] = $journalId;
 

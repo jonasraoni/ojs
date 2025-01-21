@@ -74,7 +74,7 @@ class DRIVERPlugin extends GenericPlugin
      */
     public function sets($hookName, $params)
     {
-        $sets = & $params[5];
+        $sets = &$params[5];
         array_push($sets, new \PKP\oai\OAISet('driver', 'Open Access DRIVERset', ''));
         return false;
     }
@@ -84,14 +84,14 @@ class DRIVERPlugin extends GenericPlugin
      */
     public function recordsOrIdentifiers($hookName, $params)
     {
-        $journalOAI = & $params[0];
+        $journalOAI = &$params[0];
         $from = $params[1];
         $until = $params[2];
         $set = $params[3];
         $offset = $params[4];
         $limit = $params[5];
-        $total = & $params[6];
-        $records = & $params[7];
+        $total = &$params[6];
+        $records = &$params[7];
 
         $records = [];
         if (isset($set) && $set == 'driver') {
@@ -114,7 +114,7 @@ class DRIVERPlugin extends GenericPlugin
      */
     public function addSet($hookName, $params)
     {
-        $record = & $params[0];
+        $record = &$params[0];
         $row = $params[1];
 
         if ($this->isDRIVERRecord($row)) {
@@ -128,7 +128,7 @@ class DRIVERPlugin extends GenericPlugin
      */
     public function insertDRIVERArticleTombstone($hookName, $params)
     {
-        $articleTombstone = & $params[0];
+        $articleTombstone = &$params[0];
 
         if ($this->isDRIVERArticle($articleTombstone->getOAISetObjectId(Application::ASSOC_TYPE_JOURNAL), $articleTombstone->getDataObjectId())) {
             $dataObjectTombstoneSettingsDao = DAORegistry::getDAO('DataObjectTombstoneSettingsDAO'); /** @var DataObjectTombstoneSettingsDAO $dataObjectTombstoneSettingsDao */

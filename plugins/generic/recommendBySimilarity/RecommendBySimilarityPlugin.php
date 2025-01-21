@@ -43,7 +43,7 @@ class RecommendBySimilarityPlugin extends GenericPlugin
 
         if (!Application::isUnderMaintenance() && $this->getEnabled($mainContextId)) {
             Hook::add('Templates::Article::Footer::PageFooter', function (string $hookName, array $params): bool {
-                $output = & $params[2];
+                $output = &$params[2];
                 $output .= $this->buildTemplate();
                 return Hook::CONTINUE;
             });

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file classes/services/ContextService.php
  *
@@ -57,11 +58,7 @@ class ContextService extends \PKP\services\PKPContextService
      * Take additional actions after a new context has been added
      *
      * @param string $hookName
-     * @param array $args [
-     *
-     *		@option Journal The new context
-     *		@option Request
-     * ]
+     * @param array{\APP\journal\Journal, \APP\core\Request} $args [New context, Request]
      */
     public function afterAddContext($hookName, $args)
     {
@@ -84,13 +81,7 @@ class ContextService extends \PKP\services\PKPContextService
      * Update journal-specific settings when a context is edited
      *
      * @param string $hookName
-     * @param array $args [
-     *
-     *		@option Journal The new context
-     *		@option Journal The current context
-     *		@option array The params to edit
-     *		@option Request
-     * ]
+     * @param array{\APP\journal\Journal, \APP\journal\Journal, array, \APP\core\Request} $args [New context, Current context, Params to edit, Request]
      */
     public function afterEditContext($hookName, $args)
     {
@@ -138,11 +129,7 @@ class ContextService extends \PKP\services\PKPContextService
      * ContextService::afterDeleteContext().
      *
      * @param string $hookName
-     * @param array $args [
-     *
-     *		@option Context The new context
-     *		@option Request
-     * ]
+     * @param array{\APP\journal\Journal, \APP\core\Request} $args [The new context, Request]
      */
     public function beforeDeleteContext($hookName, $args)
     {
@@ -160,11 +147,7 @@ class ContextService extends \PKP\services\PKPContextService
      * Take additional actions after a context has been deleted
      *
      * @param string $hookName
-     * @param array $args [
-     *
-     *		@option Journal The new context
-     *		@option Request
-     * ]
+     * @param array{\APP\journal\Journal, \APP\core\Request} $args [The context, Request]
      */
     public function afterDeleteContext($hookName, $args)
     {
@@ -193,11 +176,7 @@ class ContextService extends \PKP\services\PKPContextService
      * Make additional validation checks
      *
      * @param string $hookName
-     * @param array $args [
-     *
-     *		@option Journal The new context
-     *		@option Request
-     * ]
+     * @param array{\APP\journal\Journal, \APP\core\Request} $args [The context, Request]
      */
     public function validateContext($hookName, $args)
     {

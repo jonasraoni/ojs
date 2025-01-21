@@ -181,9 +181,7 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
      * Includes plugin in list of configurable registration agencies for DOI depositing functionality
      *
      * @param string $hookName DoiSettingsForm::setEnabledRegistrationAgencies
-     * @param array $args [
-     *
-     * @option $enabledRegistrationAgencies array
+     * @param array{Collection<int, IDoiRegistrationAgency>} $args [Enabled registration agencies]
      * ]
      */
     public function addAsRegistrationAgencyOption(string $hookName, array $args)
@@ -282,9 +280,7 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
      * DOI was registered.
      *
      * @param string $hookName DoiListPanel::setConfig
-     * @param array $args [
-     *
-     *      @option $config array
+     * @param array{array<string, mixed>} $args [Configuration]
      * ]
      */
     public function addRegistrationAgencyName(string $hookName, array $args): bool
@@ -299,10 +295,7 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
      * Adds self to "allowed" list of pub object types that can be assigned DOIs for this registration agency.
      *
      * @param string $hookName DoiSetupSettingsForm::getObjectTypes
-     * @param array $args [
-     *
-     *      @option array &$objectTypeOptions
-     * ]
+     * @param array{array<array<string, mixed>>} $args [Object type options]
      */
     public function addAllowedObjectTypes(string $hookName, array $args): bool
     {

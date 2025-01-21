@@ -297,8 +297,8 @@ class SubscriptionTypeDAO extends \PKP\db\DAO
     {
         $result = $this->retrieve(
             'SELECT type_id
-			 FROM   subscription_types
-			 WHERE  journal_id = ?',
+                FROM   subscription_types
+                WHERE  journal_id = ?',
             [(int) $journalId]
         );
         foreach ($result as $row) {
